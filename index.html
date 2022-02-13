@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bate-Papo UOL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img class="bate-papo-uol-logo" src="img/bate-papo-uol-logo.png" alt="Logo Bate-Papo UOL">
+        <img class="people" src="img/people.png" alt="Contatos">
+    </header>
+    <main>
+        <!--
+        Sobre as Mensagens:
+            -   Toda a estrutura do texto foi feita usando o HTML e CSS, assim o JS apenas incui as informações: from, to, text, type e time.
+            -   Usei o <em> para mudar a cor da hora da mensagem
+            -   O texto "para" e "reservadamente para" já foram incuídos na mensagem (independente do tipo), mas com display:none
+                Dessa forma o próprio CSS decide qual receberá o display:inline
+        -->
+        <p class="status"><em>(<span class="time">09:22:38</span>) </em><span class="from">Maria</span><span class="publicText"> para </span><span class="privateText"> reservadamente para </span><span class="statusText"></span><span class="to publicText privateText">Todos</span><span class="statusText"></span><span class="publicText privateText">: </span><span class="statusText"> </span><span class="text">Entrou na sala...</span></p>
+        <p class="privateMessage"><em>(<span class="time">09:22:38</span>) </em><span class="from">Maria</span><span class="publicText"> para </span><span class="privateText"> reservadamente para </span><span class="statusText"></span><span class="to publicText privateText">João</span><span class="statusText"></span><span class="publicText privateText">: </span><span class="statusText"> </span><span class="text">Oi João</span></p>
+        <p class="publicMessage"><em>(<span class="time">09:22:38</span>) </em><span class="from">Maria</span><span class="publicText"> para </span><span class="privateText"> reservadamente para </span><span class="statusText"></span><span class="to publicText privateText">Todos</span><span class="statusText"></span><span class="publicText privateText">: </span><span class="statusText"> </span><span class="text">Oi Galera</span></p>
+    </main>
+    <footer>
+        <input type="text" name="message" placeholder="Escreva aqui...">
+        <img src="img/send.png" alt="Enviar">
+    </footer>
+</body>
+</html>

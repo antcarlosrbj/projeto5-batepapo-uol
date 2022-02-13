@@ -1,0 +1,103 @@
+/* body */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #F3F3F3;
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header img {
+    margin: 0 22px;
+}
+
+.bate-papo-uol-logo {
+    width: 78px;
+    height: 55.2px;
+}
+
+.people {
+    width: 43px;
+    height: 31px;
+}
+
+/* footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 80px;
+}
+
+footer input {
+    width: calc(100% - 17px);
+    height: 100%;
+    border: 0;
+    padding-left: 17px;
+}
+
+footer img {
+    position: absolute;
+    right: 18px;
+    bottom: 27px;
+}
+
+/* main */
+
+main {
+    /* height: 1000px; */
+    margin: 80px 0;
+}
+
+em {
+    font-style: normal;
+    color: #AAAAAA;
+}
+
+.from, .to {
+    font-weight: 700;
+}
+
+main p {
+    padding: 14px 10px;
+    margin-top: 4px;
+    border-radius: 2px;
+    line-height: 20px;
+}
+
+main .status {
+    background-color: #DCDCDC;
+}
+
+main .privateMessage {
+    background-color: #FFDEDE;
+}
+
+main .publicMessage {
+    background-color: #FFFFFF;
+}
+
+.publicText, .privateText, .statusText {
+    display: none;
+}
+
+.status .statusText, .privateMessage .privateText, .publicMessage .publicText {
+    display: inline;
+}
