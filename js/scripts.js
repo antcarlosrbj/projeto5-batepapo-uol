@@ -37,28 +37,42 @@ function showMessages (mensagens) {
     p[p.length - 1].scrollIntoView();
 }
 
-setInterval(downloadMessages, 3000);
 let mensagens = [];
 
 // Entrando na sala
 
 function sendNameSuccess(answer) {
     downloadMessages();
+    setInterval(downloadMessages, 3000);
+    setInterval(userStatus, 5000);
+    hiddenEntryScreen();
+    myNameInput.value = "";
 }
 
 function sendNameFail(erro) {
-    enterRoom();
+    alert("Esse nome já está em uso.");
+    
+    loading = document.querySelector(".loading");
+    loading.classList.add("hidden");
 }
 
 function enterRoom() {
-    myName = prompt("Qual o seu nome?");
+    myNameInput = document.querySelector(".entryScreen input");
+    myName = myNameInput.value;
     myNameObject = {name: myName};
 
+    loading = document.querySelector(".loading");
+    loading.classList.remove("hidden");
+
     sendName = axios.post('https://mock-api.driven.com.br/api/v4/uol/participants', myNameObject);
-    setInterval(userStatus, 5000);
 
     sendName.then(sendNameSuccess);
     sendName.catch(sendNameFail);
+}
+
+function hiddenEntryScreen() {
+    let entryScreen = document.querySelector(".entryScreen");
+    entryScreen.classList.add("hidden");
 }
 
 function userStatus() {
@@ -67,8 +81,9 @@ function userStatus() {
 
 let sendName = "";
 let myName = "";
+let myNameInput = "";
 let myNameObject = "";
-enterRoom();
+let loading = "";
 
 // Enviar mensagem
 
@@ -154,7 +169,7 @@ function selectContact(liSelected) {
     contact = liSelected.querySelector("p");
     contact = contact.innerText;
 
-    recipient()
+    recipient();
 }
 
 function selectVisibility(selectedVisibility) {
